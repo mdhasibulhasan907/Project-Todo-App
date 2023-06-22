@@ -3,6 +3,8 @@ import React from 'react'
 // eslint-disable-next-line no-unused-vars
 import { Todo } from './Todo'
 
+import style from './todos.module.css';
+
 
 const Todos = (props) => {
     // eslint-disable-next-line no-undef
@@ -11,9 +13,10 @@ const Todos = (props) => {
 //    todos->section 
 // todo-> article
   return (
-    <section>
+    <section className={style.todos}>
       {
         
+         // eslint-disable-next-line react/prop-types
          props.todos.map((todo) => <Todo key={Todos.id} todo={todo}/>)
       }
     </section>
